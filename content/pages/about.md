@@ -3,7 +3,7 @@ template: page
 title: About me
 slug: about-me
 socialImage: /media/image-2.jpg
-draft: true
+draft: false
 ---
 Ambitious, passionate community engineer with a niche in music, videography and futsal. Welcome to my personal blog!
 
