@@ -5,7 +5,13 @@ slug: CLD
 socialImage: /media/cld.jpg
 draft: false
 date: 2020-10-22T15:40:15.120Z
-description: Community led development
+description: Community-led Development (CLD) is the process of working together
+  to create and achieve locally owned visions and goals. It is a planning and
+  development approach that’s based on a set of core principles that (at a
+  minimum) set vision and priorities by the people who live in that geographic
+  community, put local voices in the lead, build on local strengths (rather than
+  focus on problems), collaborate across sectors, is intentional and adaptable,
+  and works to achieve systemic change rather than short-term projects.
 category: DEVELOPMENT
 tags:
   - Community led development
