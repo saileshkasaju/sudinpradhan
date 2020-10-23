@@ -29,6 +29,8 @@ Three major reasons why community led development approach is done
 2. meets urgent, relevant, and pressing needs specific to each community, and 
 3. builds trusting relationships. 
 
+   ![](/media/cld.jpg "The Process of CLD")
+
 Basic steps of CLD (See figure)
 
 1. Decide what you want to change(strategy)
