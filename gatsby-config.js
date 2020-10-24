@@ -190,7 +190,9 @@ module.exports = {
         theme_color: '#F7A046',
         display: 'standalone',
         icon: 'static/photo.jpg',
-        purpose: 'maskable',
+        icon_options: {
+          purpose: `any maskable`,
+        },
       },
     },
     'gatsby-plugin-offline',
