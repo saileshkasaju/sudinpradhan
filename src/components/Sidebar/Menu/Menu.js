@@ -24,11 +24,6 @@ const Menu = ({ menu }: Props) => (
           </Link>
         </li>
       ))}
-      <li>
-        <button id="add-button" className={styles['menu__list-item-link']}>
-          Add to home screen
-        </button>
-      </li>
     </ul>
   </nav>
 );
