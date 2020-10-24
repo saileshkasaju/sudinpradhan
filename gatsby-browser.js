@@ -3,8 +3,6 @@
 require('./src/assets/scss/init.scss');
 require('./static/css/prismjs/theme.min.css');
 exports.onInitialClientRender = () => {
-  console.log('ReactDOM.render has executed');
-
   let deferredPrompt;
   const addBtn = document.getElementById('add-button');
   addBtn.style.display = 'none';
