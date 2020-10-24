@@ -6,8 +6,8 @@ import styles from './Menu.module.scss';
 type Props = {
   menu: {
     label: string,
-    path: string
-  }[]
+    path: string,
+  }[],
 };
 
 const Menu = ({ menu }: Props) => (
@@ -24,6 +24,11 @@ const Menu = ({ menu }: Props) => (
           </Link>
         </li>
       ))}
+      <li>
+        <button id="add-button" className={styles['menu__list-item-link']}>
+          Add to home screen
+        </button>
+      </li>
     </ul>
   </nav>
 );
