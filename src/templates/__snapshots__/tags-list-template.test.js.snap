@@ -39,6 +39,17 @@ exports[`TagsListTemplate renders correctly 1`] = `
         >
           Test bio
         </p>
+        <h2
+          className="author__title"
+        >
+          <a
+            className="author__title-link"
+            href="/"
+            id="add-button"
+          >
+            Add Sudin
+          </a>
+        </h2>
       </div>
       <nav
         className="menu"
