@@ -7,3 +7,11 @@ exports[`Layout renders correctly 1`] = `
   test
 </div>
 `;
+
+exports[`Layout with socialImage renders correctly with socialImage 1`] = `
+<div
+  className="layout"
+>
+  test
+</div>
+`;

@@ -11,19 +11,39 @@ describe('Layout', () => {
     ...siteMetadata,
     children: 'test',
     description: 'test',
-    title: 'test'
+    title: 'test',
   };
 
   beforeEach(() => {
     StaticQuery.mockImplementationOnce(
-      ({ render }: RenderCallback) => (
-        render(props)
-      ),
+      ({ render }: RenderCallback) => render(props),
       useStaticQuery.mockReturnValue(props)
     );
   });
 
   it('renders correctly', () => {
+    const tree = renderer.create(<Layout {...props} />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+
+describe('Layout with socialImage', () => {
+  const props = {
+    ...siteMetadata,
+    children: 'test',
+    description: 'test',
+    title: 'test',
+    socialImage: 'socialImage',
+  };
+
+  beforeEach(() => {
+    StaticQuery.mockImplementationOnce(
+      ({ render }: RenderCallback) => render(props),
+      useStaticQuery.mockReturnValue(props)
+    );
+  });
+
+  it('renders correctly with socialImage', () => {
     const tree = renderer.create(<Layout {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
