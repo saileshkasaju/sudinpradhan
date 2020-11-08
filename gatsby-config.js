@@ -59,15 +59,17 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) =>
-              allMarkdownRemark.edges.map((edge) => ({
+            serialize: ({ query }) => {
+              const { site, allMarkdownRemark } = query;
+              return allMarkdownRemark.edges.map((edge) => ({
                 ...edge.node.frontmatter,
                 description: edge.node.frontmatter.description,
                 date: edge.node.frontmatter.date,
                 url: site.siteMetadata.site_url + edge.node.fields.slug,
                 guid: site.siteMetadata.site_url + edge.node.fields.slug,
                 custom_elements: [{ 'content:encoded': edge.node.html }],
-              })),
+              }));
+            },
             query: `
               {
                 allMarkdownRemark(
@@ -172,12 +174,14 @@ module.exports = {
           }
         `,
         output: '/sitemap.xml',
-        serialize: ({ site, allSitePage }) =>
+        serialize: (sitemaps) => {
+          const { site, allSitePage } = sitemaps;
           allSitePage.edges.map((edge) => ({
             url: site.siteMetadata.siteUrl + edge.node.path,
             changefreq: 'daily',
             priority: 0.7,
-          })),
+          }));
+        },
       },
     },
     {
@@ -191,7 +195,7 @@ module.exports = {
         display: 'standalone',
         icon: 'static/photo.jpg',
         icon_options: {
-          purpose: `any maskable`,
+          purpose: 'any maskable',
         },
       },
     },

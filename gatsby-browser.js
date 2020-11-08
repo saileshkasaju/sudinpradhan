@@ -2,6 +2,7 @@
 
 require('./src/assets/scss/init.scss');
 require('./static/css/prismjs/theme.min.css');
+
 exports.onInitialClientRender = () => {
   let deferredPrompt;
   const addBtn = document.getElementById('add-button');
@@ -15,7 +16,7 @@ exports.onInitialClientRender = () => {
     // Update UI to notify the user they can add to home screen
     addBtn.style.display = 'block';
 
-    addBtn.addEventListener('click', (e) => {
+    addBtn.addEventListener('click', () => {
       // hide our user interface that shows our A2HS button
       addBtn.style.display = 'none';
       // Show the prompt
